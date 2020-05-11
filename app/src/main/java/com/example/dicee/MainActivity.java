@@ -30,6 +30,17 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.dice5,
                 R.drawable.dice6
         };
+        roll_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Random randomNumberGenerator = new Random();
+                int number = randomNumberGenerator.nextInt (6);
+                left_dice.setImageResource(diceArray[number]);
+                int number_2 = randomNumberGenerator.nextInt(6);
+                right_dice.setImageResource(diceArray[number_2]);
 
+            }
+
+        });
     }
 }
